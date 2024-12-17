@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Modern Layout with Iframes</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+        .row {
+            display: flex;
+            width: 100%;
+        }
+        .row1 {
+            height: 15%;
+        }
+        .row2 {
+            height: 45%;
+        }
+        .row3 {
+            height: 40%; /* Remaining space */
+        }
+        iframe {
+            border: 1px solid black;
+            flex: 1;
+        }
+        /* Increase column size for row 3 */
+        .row3 iframe:first-child {
+            flex: 2; /* First iframe takes up more space */
+        }
+    </style>
+</head>
+<body>
+    <!-- Row 1 -->
+    <div class="row row1">
+        <iframe src="frame1.html" name="frame1"></iframe>
+        <iframe src="task2r12.html" name="frame2"></iframe>
+    </div>
+
+    <!-- Row 2 -->
+    <div class="row row2">
+        <iframe src="task2r21.html" name="frame3"></iframe>
+        <iframe src="task2r22.html" name="frame4"></iframe>
+        <iframe src="task2r23.html" name="frame5"></iframe>
+        <iframe src="task2r24.html" name="frame6"></iframe>
+        <iframe src="task2r25.html" name="frame7"></iframe>
+    </div>
+
+    <!-- Row 3 -->
+    <div class="row row3">
+        <iframe src="task2r31.html" name="frame8"></iframe>
+        <iframe src="task2r32.html" name="frame9"></iframe>
+    </div>
+</body>
+</html>
